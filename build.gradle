@@ -59,7 +59,6 @@ tasks.named('processResources', ProcessResources).configure {
         expand replaceProperties
     }
 }
-
 tasks.named('jar', Jar).configure {
     manifest {
         attributes([
@@ -69,5 +68,4 @@ tasks.named('jar', Jar).configure {
                 'Implementation-Version': project.jar.archiveVersion
         ])
     }
-    finalizedBy 'reobfJar'
 }
